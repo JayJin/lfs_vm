@@ -1,0 +1,15 @@
+How to use this box with Vagrant
+Step 1
+Option 1: Create a Vagrantfile and initiate the box
+vagrant init ubuntu/trusty64 --box-version 20191107.0.0
+
+Option 2: Open the Vagrantfile and replace the contents with the following
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.box_version = "20191107.0.0"
+end
+
+Step 2
+Bring up your virtual machine
+
+vagrant up
